@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "474760682460",
+    "project_id": "fir-lite-891ed",
+    "storage_bucket": "fir-lite-891ed.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474760682460:android:3262d3297db2b349cdcd19",
+        "android_client_info": {
+          "package_name": "com.example.firebaselite"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU93BXfs7fmmezjsiHC71kHpUPKrBJvcQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
