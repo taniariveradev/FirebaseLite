@@ -6,8 +6,14 @@ Esta aplicación es un ejemplo práctico de desarrollo de una app de alta calida
 
 ## Características principales:
 
-- Firebase
-
 - Kotlin
 
 - Jetpack Compose
+
+- Firebase
+
+- Crashlytics
+
+- Authentication
+
+- Cloud Firestore
