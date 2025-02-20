@@ -11,6 +11,7 @@ composeBom = "2025.02.00" # Versión del Bill of Materials (BoM) de Jetpack Comp
 firebaseBom = "33.1.1"  # Versión del BoM de Firebase
 googleServices = "4.4.2"  # Versión del plugin de Google Services
 crashlytics = "3.0.2"  # Versión de Crashlytics
+navigationCompose = "2.7.7" # Última versión estable de Navigation Compose
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -31,6 +32,10 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 # Firebase
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
+firebase-auth = { module = "com.google.firebase:firebase-auth-ktx" }
+
+# Navigation
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
