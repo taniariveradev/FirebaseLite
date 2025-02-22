@@ -25,7 +25,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.firebaselite.R
@@ -46,6 +45,7 @@ fun LoginScreen(auth: FirebaseAuth, navigateToHome: () -> Unit) {
             .padding(horizontal = 32.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+
         Row() {
             Icon(
                 painter = painterResource(id = R.drawable.ic_back),
@@ -83,67 +83,13 @@ fun LoginScreen(auth: FirebaseAuth, navigateToHome: () -> Unit) {
             auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     navigateToHome()
-                    Log.i("Login", "Login Correcto")
+                    Log.i("Resultado", "Login Correcto")
                 } else {
                     //Error
-                    Log.i("Login", "Login Incorrecto")
+                    Log.i("Resultado", "Login Incorrecto")
                 }
             }
         }) {
-            Text(text = "Login")
-        }
-    }
-}
-
-@Preview
-@Composable
-fun LoginPreview() {
-    var email by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
-
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Black)
-            .padding(horizontal = 32.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-
-        Row() {
-            Icon(
-                painter = painterResource(id = R.drawable.ic_back),
-                contentDescription = "",
-                tint = White,
-                modifier = Modifier
-                    .padding(vertical = 24.dp)
-                    .size(24.dp)
-            )
-            Spacer(modifier = Modifier.weight(1f))
-        }
-        Text("Email", color = White, fontWeight = FontWeight.Bold, fontSize = 40.sp)
-        TextField(
-            value = email,
-            onValueChange = { email = it },
-            modifier = Modifier.fillMaxWidth(),
-            colors = TextFieldDefaults.colors(
-                unfocusedContainerColor = UnselectedField,
-                focusedContainerColor = SelectedField
-            )
-        )
-        Spacer(Modifier.height(48.dp))
-
-        Text("Password", color = White, fontWeight = FontWeight.Bold, fontSize = 40.sp)
-        TextField(
-            value = password,
-            onValueChange = { password = it },
-            modifier = Modifier.fillMaxWidth(),
-            colors = TextFieldDefaults.colors(
-                unfocusedContainerColor = UnselectedField,
-                focusedContainerColor = SelectedField
-            )
-        )
-        Spacer(Modifier.height(48.dp))
-        Button(onClick = { }) {
             Text(text = "Login")
         }
     }

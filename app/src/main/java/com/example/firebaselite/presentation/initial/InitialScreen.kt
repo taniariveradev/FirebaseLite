@@ -59,10 +59,7 @@ fun InitialScreen(navigateToLogin: () -> Unit = {}, navigateToSignUp: () -> Unit
             fontWeight = FontWeight.Bold
         )
         Text(
-            "Free on Spotify.",
-            color = Color.White,
-            fontSize = 38.sp,
-            fontWeight = FontWeight.Bold
+            "Free on Spotify", color = Color.White, fontSize = 38.sp, fontWeight = FontWeight.Bold
         )
         Spacer(modifier = Modifier.weight(1f))
         Button(
@@ -77,9 +74,7 @@ fun InitialScreen(navigateToLogin: () -> Unit = {}, navigateToSignUp: () -> Unit
         }
         Spacer(modifier = Modifier.height(8.dp))
         CustomButton(
-            Modifier.clickable { },
-            painterResource(id = R.drawable.google),
-            "Continue with Google"
+            Modifier.clickable { }, painterResource(id = R.drawable.google), "Continue with Google"
         )
         Spacer(modifier = Modifier.height(8.dp))
         CustomButton(

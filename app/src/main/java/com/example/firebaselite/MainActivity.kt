@@ -31,7 +31,6 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     NavigationWrapper(navHostController, auth)
-
                 }
             }
         }
