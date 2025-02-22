@@ -38,6 +38,9 @@ class HomeViewmodel : ViewModel() {
     val blockVersion: StateFlow<Boolean> = _blockVersion
 
     init {
+//        repeat(20) {
+//            loadData()
+//        }
         checkUserVersion()
         getArtists()
         getPlayer()
@@ -60,6 +63,16 @@ class HomeViewmodel : ViewModel() {
             }
         }
     }
+    /*//Carga datos Random
+            private fun loadData() {
+            val random = (1..10000).random()
+            val artist = Artist(
+                name = "Random $random",
+                description = "Descripción random número $random",
+                image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwyXeKDN29AmZgZPLS7n0Bepe8QmVappBwZCeA3XWEbWNdiDFB"
+            )
+            db.collection("artists").add(artist)
+        }*/
 
     private fun getArtists() {
         viewModelScope.launch {
@@ -79,8 +92,8 @@ class HomeViewmodel : ViewModel() {
                 .await()
                 .documents
                 .mapNotNull { snapshot ->
-                snapshot.toObject(Artist::class.java)
-            }
+                    snapshot.toObject(Artist::class.java)
+                }
         } catch (e: Exception) {
             Log.i("Prueba", e.toString())
             emptyList()

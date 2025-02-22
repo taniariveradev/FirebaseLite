@@ -171,12 +171,34 @@ fun ArtistItem(artist: Artist, onItemSelected: (Artist) -> Unit) {
 @Composable
 fun ArtistItemPreview() {
     val artist = Artist(
-        "Tania",
+        "taniariveradev",
         "La mejor",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwyXeKDN29AmZgZPLS7n0Bepe8QmVappBwZCeA3XWEbWNdiDFB",
     )
     ArtistItem(artist = artist) {}
 }
+
+/*  //Carga datos random
+    fun createArtist(db: FirebaseFirestore) {
+    val random = (1..10000).random()
+    val artist = Artist(
+        name = "Random $random",
+        description = "Descripción random número $random",
+        image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwyXeKDN29AmZgZPLS7n0Bepe8QmVappBwZCeA3XWEbWNdiDFB"
+    )
+    db.collection("artists")
+        .add(artist)
+        .addOnSuccessListener {
+            Log.i("Aris", "SUCCESS")
+        }
+        .addOnFailureListener {
+            Log.i("Aris", "FAILURE")
+        }
+        .addOnCompleteListener {
+            Log.i("Aris", "COMPLETE")
+        }
+
+}*/
 
 fun navigateToPlayStore(context: Context) {
     val appPackage = context.packageName
